@@ -1,7 +1,7 @@
 %% Plot the filter
 xtick = (cumsum(ones(1,51)) - 1) * 100 * 2 / 11025; % Define freqency in hz
 h = fvtool(Hd); % Display the magnitude
-set(h,'analysis','freq'); % Set analysis to frequency
+% set(h,'analysis','freq'); % Set analysis to frequency
 set(gca, 'Fontsize', 14); % Set fontsize
 set(gca, 'XTick', xtick); % Set xaxis to evenly space frequency
 set(gca, 'XTickLabel', num2str(xtick' * 11025 / 2)); % Set xaxis to hz
