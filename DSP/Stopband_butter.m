@@ -1,8 +1,8 @@
 % Stopband filter
-% • passbands: [0 − 1400]Hz and [1, 900 − 5, 512.5]Hz
-% • stopband [1, 600 − 1, 700]Hz,
-% • tolerance in the passband: 0.5 dB,
-% • Maximum gain in the stopband: −100 dB
+% passbands: [0 - 1400]Hz and [1,900 - 5,512.5]Hz
+% stopband [1,600 - 1,700]Hz,
+% tolerance in the passband: 0.5 dB,
+% Maximum gain in the stopband: −100 dB
 sampFreq = 11025; % Hz
 Fp1 = 1400/sampFreq; % End of first passband (normalized)
 Fst1 = 1600/sampFreq; % Start of stopband (normalized)
