@@ -14,14 +14,13 @@ ylim([-110 10]); % set y bounds
 grpdelay(Hd); % Plot group delay
 set(gca, 'Fontsize', 14); % Set fontsize
 set(gca, 'XTick', xtick(1:10:end)); % Set xaxis to evenly space frequenc
-set(gca, 'XTickLabel', num2str(xtick(1:10:end)' * 11025 / 2)); % Set xaxis to
-hz
+set(gca, 'XTickLabel', num2str(xtick(1:10:end)' * 11025 / 2)); % Set xaxis to hz
 xlabel('Frequency (Hz)', 'FontSize', 14); % Label xaxis
 set(get(gca, 'YLabel'), 'FontSize', 14); % Set yaxis fontsize
 title([type ' Group Delay'], 'FontSize', 16); % Title
 xlim([.1 .9]); % Set x axis bounds
 % Pole-Zero plot
-zplane(Hd, 'off'); % Plot the pole-zero diagram
+zplane(Hd); % Plot the pole-zero diagram
 set(gca, 'FontSize', 14); % Scale font size
 title([type ' Pole-Zero Plot'], 'FontSize', 16); % Title
 set(get(gca, 'XLabel'), 'FontSize', 14); % X label font size
