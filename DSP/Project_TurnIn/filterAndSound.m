@@ -1,5 +1,5 @@
 %% Plot the filter
-xtick = (cumsum(ones(1,51)) - 1) * 100 * 2 / 11025; % Define freqency in hz
+xtick = (0:50) * 100 * 2 / 11025; % Define freqency in hz
 h = fvtool(Hd); % Display the magnitude
 % set(h,'analysis','freq'); % Set analysis to frequency
 set(gca, 'Fontsize', 14); % Set fontsize
@@ -37,4 +37,4 @@ stem(1:100, y); % Plot the impulse response
 % Sound output
 output = filter(Hd, noise); % Convolve the signal with the filter
 output = output / max(output); % Normalize so the max is 1
-sound(output, Fs); % Play the output sound
+% sound(output, Fs); % Play the output sound

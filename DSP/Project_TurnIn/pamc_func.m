@@ -1,5 +1,4 @@
 %% Parks-McClellan
-
 type = 'Parks-McClellan';
 % Calculate order
 [n, fo, ao, w] = firpmord(fcuts, mags, devs, nyq * 2); 
