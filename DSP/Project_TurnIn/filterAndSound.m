@@ -37,4 +37,7 @@ stem(1:100, y); % Plot the impulse response
 % Sound output
 output = filter(Hd, noise); % Convolve the signal with the filter
 output = output / max(output); % Normalize so the max is 1
+filename = strcat(type,'_clean.wav');
+disp(filename);
+audiowrite(filename,output,Fs);
 % sound(output, Fs); % Play the output sound
