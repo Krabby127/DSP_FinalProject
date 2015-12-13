@@ -6,5 +6,5 @@ Rp = 0.5; % Passband ripple in decibels.
 Rs = 100; % Stopband attenuation in decibels.
 fcuts = [1400, 1600, 1700, 1900]; % Cutoff frequencies
 mags = [1 0 1]; % Magnitudes (stopband)
-devs = [10^(1/40)-1 10^-5 10^(1/40)-1]; % ripples
+devs = [10^(1/40),-1, 10^-5, 10^(1/40),-1]; % ripples
 [noise, Fs] = audioread('noisy.wav'); % Read the noise file
