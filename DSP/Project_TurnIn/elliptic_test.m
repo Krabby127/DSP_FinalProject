@@ -48,9 +48,9 @@ end
 
 s = double(x);
 y = step(Hd,s);
+% Impulse response settles down after ~ 17 samples
+% Ignore first 17 samples
+y(1:17)=0;
 % Bound between -1 and 1
-% Impulse response settles down after ~ 5 samples
-% Ignore first 5 samples
-y(1:5)=0;
 y=y./max(abs(y));
 audiowrite('clean_Elliptic.wav',y,11025);

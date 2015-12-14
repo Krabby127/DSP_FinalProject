@@ -164,5 +164,5 @@ y(177)=0;
 % Bound between -1 and 1
 y=y./max(abs(y));
 % linearly interpolate actual value of y(177)
-y(177)=(y(176)+y(178))/2;
+y(177)=-(y(176)+y(178))/2;
 audiowrite('clean_Kaiser.wav',y,11025);

@@ -49,5 +49,9 @@ end
 
 s = double(x);
 y = step(Hd,s);
+% Impulse response settles down after 15 samples
+% Remove first 15 samples
+y(1:15)=0;
+% Normalize between -1 and 1
 y=y./max(abs(y));
 audiowrite('clean_Cheb1.wav',y,11025);

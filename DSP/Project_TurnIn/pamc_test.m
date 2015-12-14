@@ -106,5 +106,10 @@ if isempty(Hd)
 end
 
 y = step(Hd,x);
+% Disregard sample 98, as it has an unusually high impulse response
+y(98)=0;
+% Bound between -1 and 1
 y=y./max(abs(y));
+% linearly interpolate actual value of y(98)
+y(98)=-(y(97)+y(99))/2;
 audiowrite('clean_PaMc.wav',y,11025);
