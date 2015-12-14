@@ -55,4 +55,3 @@ s = double(x);
 y = step(Hd,s);
 y=y./max(abs(y));
 audiowrite('clean_Butter.wav',y,11025);
-

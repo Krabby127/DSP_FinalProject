@@ -51,4 +51,3 @@ s = double(x);
 y = step(Hd,s);
 y=y./max(abs(y));
 audiowrite('clean_Cheb2.wav',y,11025);
-

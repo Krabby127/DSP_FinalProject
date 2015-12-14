@@ -1,4 +1,4 @@
-%% Process all files and output filters
+%% Process all filters and output audio files
 [noise, Fs] = audioread('noisy.wav'); % Read the noise file
 cheb1_test(noise);
 cheb2_test(noise);
