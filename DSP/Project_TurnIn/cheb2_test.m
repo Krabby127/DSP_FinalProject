@@ -49,8 +49,8 @@ end
 
 s = double(x);
 y = step(Hd,s);
-% Impulse response settles down after ~ 17 samples
-% Ignore first 17 samples
+% Impulse response settles down after ~ 28 samples
+% Ignore first 28 samples
 y(1:28)=0;
 % Bound between -1 and 1
 y=y./max(abs(y));
